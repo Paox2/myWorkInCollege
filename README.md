@@ -7,9 +7,9 @@ This part is my coursework in UNNC since the second semester. If you have some q
 
  course | title
  -|-
- c | [airstrikeplanner](../c/"airstrikeplanner.c")
- cf | [chip](../cf/cw1) <br/> [assembler](../cf/cw2)
- sys | [fibonacci](../sys/Q1.s) <br/> [printf](../sys/Q2.s)
+ c | [airstrikeplanner](c/airstrikeplanner.c)
+ cf | [chip](cf/cw1) <br/> [assembler](cf/cw2)
+ sys | [fibonacci](sys/Q1.s) <br/> [printf](sys/Q2.s)
 
 # Introduce to each work
 
@@ -86,7 +86,7 @@ This part is my coursework in UNNC since the second semester. If you have some q
 ### chip in cf
 
 Use gate to implement substract chip, multiple chip, exponential chip, compare chip, and check if result is overflow.
-You can access the report click [here](../cf/cw1/readme.pdf)
+You can access the report click [here](cf/cw1/readme.pdf)
 
 ### assembler in cf
 

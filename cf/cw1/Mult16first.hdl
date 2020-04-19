@@ -1,0 +1,19 @@
+// this is the first part of mult to make input be position number
+// output sel1 and sel2 used to help second part if the output should be negative
+
+CHIP Mult16first  {
+    IN
+        a[16], b[16];
+
+    OUT
+        c[16], d[16], 
+        sel1, sel2;
+
+    PARTS:
+    And(a=a[15], b=a[15], out=sel1);	// the sign of a
+    And(a=b[15], b=b[15], out=sel2); 	// the sign of b
+    Opposite16(in=a, out=oppoa);	// -a
+    Opposite16(in=b, out=oppob);	// -b
+    Mux16(a=a, b=oppoa, sel=a[15], out=c); // output the module of a according to the sign of a 
+    Mux16(a=b, b=oppob, sel=b[15], out=d);// ouput the module of b according to the sign of b
+}

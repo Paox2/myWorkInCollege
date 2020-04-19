@@ -1,0 +1,29 @@
+// a litte same as mult by judge the each bit of the index which is in binary and judge if to mult base number corrseponding degree
+// first create a number 1 in binary , in first judge, if the index is zero then be the temp out to be 1
+// because index no more than 5 so just see the last three bits
+// the second out of2 is help to judge overflow
+
+CHIP Exponential {
+    IN 
+        a[16], b[16];
+
+    OUT
+        out[16], of2;
+
+    PARTS:
+    // create binary 1 in tp1
+    cBinary1(in=true, out=tp1);
+
+    Mux16(a=tp1, b=a, sel=b[0], out=tp2);	//first judge: see if tp2 is 1 or a  according to the b[0]
+
+    Mult16(a=a, b=a, out=mux1);                              //this is  a * a
+    Mult16(a=mux1, b=tp2, out=mux2);                   //use for the second times judge which is the mult between tp2 and a*a
+    Mux16(a=tp2, b=mux2, sel=b[1], out=tp3);	// see if tp3 is tp2 or tp2 * a * a  according to the b[1]
+
+    Mult16(a=mux1, b=mux1, out=mux3);                // a * a * a * a
+    Mult16(a=mux3, b=tp3, out=mux4);                   //use for the third judge which is the mult between tp3 and a*a*a*a
+    Mux16(a=tp3, b=mux4, sel=b[2], out=out, out[15]=tp4);// see if out is tp3 or tp3 * a * a * a * a and save the sign of out as tp4
+
+    // judge overflow
+    And(a=tp4, b=tp4, out=of2);    
+}

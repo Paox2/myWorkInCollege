@@ -1,0 +1,14 @@
+// mult is divide into two part : positive the input and calculate the output by shifting and add
+//the reason i put it to two part because it is easy to see the effect of each part compared with one
+
+
+CHIP Mult16 {
+    IN
+        a[16], b[16]; 
+    OUT
+        out[16];
+
+    PARTS:
+    Mult16first(a=a, b=b, c=c, d=d, sel1=sel1, sel2=sel2); // c, d if the module of a and b, also, sel1 and sel2 is the sign of a and b
+    Mult16second(a=c, b=d, sel1=sel1, sel2=sel2, out=out);
+}

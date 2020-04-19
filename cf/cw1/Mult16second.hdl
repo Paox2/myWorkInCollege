@@ -1,0 +1,55 @@
+// this is the second part of mult
+// this part is about left shift the first 16-bits input 1bit each time and judge if save the value or save 0 according to the value of second input
+//then add the save number together
+
+// input a[16] and b[16] is the binary in positive
+//the sel1 and sel2 to decide the sign of result
+
+
+CHIP Mult16second {
+    IN
+        a[16], b[16],
+        sel1, sel2;
+
+    OUT
+        out[16];
+
+    PARTS:
+    Mux16(a[0..15]=false, b=a, sel=b[0], out=out1);
+  
+    // move left 1 bit
+    Movel(in=a, out=move1);
+    Mux16(a[0..15]=false, b=move1, sel=b[1], out=out2);	// according to b, to decide if value need to save or save 0
+    
+    // move left 1 bit again
+    Movel(in=move1, out=move2);
+    Mux16(a[0..15]=false, b=move2, sel=b[2], out=out3);	// according to b, to decide if value need to save or save 0
+    
+    // move left 1 bit again
+    Movel(in=move2, out=move3);
+    Mux16(a[0..15]=false, b=move3, sel=b[3], out=out4);	// according to b, to decide if value need to save or save 0
+    
+    // move left 1 bit again
+    Movel(in=move3, out=move4);
+    Mux16(a[0..15]=false, b=move4, sel=b[4], out=out5);	// according to b, to decide if value need to save or save 0
+
+    // move left 1 bit again
+    Movel(in=move4, out=move5);
+    Mux16(a[0..15]=false, b=move5, sel=b[5], out=out6);	// according to b, to decide if value need to save or save 0
+
+    // move left 1 bit again
+    Movel(in=move5, out=move6);
+    Mux16(a[0..15]=false, b=move6, sel=b[6], out=out7);	// according to b, to decide if value need to save or save 0
+
+    //add the above out together
+    Add16(a=out1, b=out2, out=tp1);
+    Add16(a=tp1, b=out3, out=tp2);
+    Add16(a=tp2, b=out4, out=tp3);
+    Add16(a=tp3, b=out5, out=tp4);
+    Add16(a=tp4, b=out6, out=tp5);
+    Add16(a=tp5, b=out7, out=tp6);
+   
+    Opposite16(in=tp6, out=oppotp6);	// get the opposite value of result
+    Xor(a=sel1, b=sel2, out=sel3);	// get the sign of output
+    Mux16(a=tp6, b=oppotp6, sel=sel3, out=out); // decide result is a positive number or negetive
+}

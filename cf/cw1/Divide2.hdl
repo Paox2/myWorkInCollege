@@ -1,0 +1,12 @@
+// because out is round down so just move right one bit can get the out
+
+CHIP Divide2 {
+    IN
+        in[16];
+
+    OUT
+        out[16];
+
+    PARTS:
+    Mover(in=in, out=out);
+}

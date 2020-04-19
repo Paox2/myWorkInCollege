@@ -1,0 +1,19 @@
+// us a+(-b) to implement a - b
+//second output used to help to judge overflow
+
+CHIP Sub16 {
+    IN
+        a[16], b[16];
+
+    OUT
+        out[16], of1;
+
+    PARTS:
+    Opposite16(in=b, out=oppob);	// -b
+    Add16(a=a, b=oppob, out=out, out[15]=tp1); // a + (-b)
+
+    //second output used to judge overflow
+    Xor(a=a[15], b=b[15], out=tp2);	// see if a and b have the same sign
+    Xor(a=a[15], b=tp1, out=tp3);	// see if a and the result have the same sign
+    And(a=tp2, b=tp3, out=of1);	// if a and b have the same sign then out is 0, if a and b have opposite sign then, if result sign not same as a, output 1, otherwise output 0
+}

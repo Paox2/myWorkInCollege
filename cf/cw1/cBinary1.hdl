@@ -1,0 +1,13 @@
+// this file is to creat a binary number 1 to be used by exponential
+
+CHIP cBinary1  {
+    IN
+        in[16];
+
+    OUT
+        out[16];
+
+    PARTS:
+    Not16(in=true, out[1..15]=out[1..15], out[0]=tp1);
+    Not(in=tp1, out=out[0]);
+}

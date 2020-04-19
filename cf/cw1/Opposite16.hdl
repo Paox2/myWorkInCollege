@@ -1,0 +1,11 @@
+CHIP Opposite16{
+    IN
+        in[16];
+
+    OUT
+        out[16];
+
+    PARTS:
+    Not16(in=in, out=notin);	// countercode add 1 
+    Inc16(in=notin, out=out);
+}

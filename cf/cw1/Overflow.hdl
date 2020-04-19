@@ -1,0 +1,15 @@
+// a is judge if sub overflow, b is exponential
+// use mux to judge if sub and mult have been execute
+
+CHIP Overflow  {
+    IN
+        a, b, S, F;
+
+    OUT
+        out;
+
+    PARTS:
+    Mux(a=false, b=a, sel=S, out=tp1);	// judge if excute sub
+    Mux(a=false, b=b, sel=F, out=tp2);	// judge if excute mult
+    Or(a=tp1, b=tp2, out=out);		// judge if use, if they are overflow or just one of them overflow or not use them
+}

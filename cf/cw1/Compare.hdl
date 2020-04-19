@@ -1,0 +1,23 @@
+//Decide if x is bigger than y, output = 1 ，if x is equal to or less than y, output -1
+//first creat a 1 and -1 in binary which is used to output
+//compare  if a and b have same sign, see the sign of (a - b), otherwise, to see if a is positive or not, if a is positive than a is great than b
+
+CHIP Compare {
+    IN
+        a[16], b[16];
+
+    OUT
+        out[16];
+
+    PARTS:
+    // creat 1 and -1
+    cBinary1(in=true, out=c1);
+    Opposite16(in=c1, out=c2);
+    
+    // compare
+    Xor(a=a[15], b=b[15], out=tp1);	// see if a and b have same sign
+    Sub16(a=a, b=b, out = tp4);	// get the sign of (a-b)
+    Sub16(a=tp4, b=c1, out[15]=tp2);	// see the sign of (a-b-1), because when a equal to b, the result is 0000...000, the fifteenth bit also is 0
+    Mux(a=tp2, b=a[15], sel=tp1, out=tp3);   //according to the sign of a and b. if same, than see the sign of (a-b-1), otherwise, see the sign of a
+    Mux16(a=c1, b=c2, sel=tp3, out=out);    //see if a is great than b, if true output 1, otherwise output -1
+}

@@ -1,0 +1,50 @@
+//   S     :     Subtract y from x 
+//   M    :     Multiply x by y
+//   D     :    Divide x by 2
+//   F     :     Calculate an exponential expression
+//   GL   :     Decide if x is bigger than y, output = 1 if true, -1 in binary if false
+//   of    :     if a number is greater than 32767 (overflow)  of is true; otherwise not
+//   mention : each operation excute correcting only if the specific switch is true
+
+//   for efficiency in mult i use left shift, there are two ways: add and normal left shift, I choose the second one because it may call less chip
+//   also, inside the exponential and sub chip add a out (of1 and of2) can directly use in judge overflow, let the chip easier
+//   for the whole structure i use x to be the main line and each out combine with y, i think it also can improve the utilization, not more time to use x.
+
+CHIP CWALU {
+    IN  
+        x[16], y[16],      
+        S, 
+        M, 
+        D, 
+        F, 
+        GL;  
+
+
+    OUT 
+        out[16],  
+        of; 
+
+    PARTS:
+    //first judge if excute the sub
+    Sub16(a=x, b=y, out=tp1, of1=of1);
+    Mux16(a=x, b=tp1, sel=S, out=out1);
+
+    //judge if mult
+    Mult16(a=out1, b=y, out=tp2);
+    Mux16(a=out1, b=tp2, sel=M, out=out2);
+
+    //judge if divide
+    Divide2(in=out2, out=tp3);
+    Mux16(a=out2, b=tp3, sel=D, out=out3);
+
+    //judge if exponential expression
+    Exponential(a=out3, b=y, out=tp4, of2=of2);
+    Mux16(a=out3, b=tp4, sel=F, out=out4);
+
+    //judge if compare
+    Compare(a=out4, b=y, out=tp5);
+    Mux16(a=out4, b=tp5, sel=GL, out=out);
+
+    //judge overflow
+    Overflow(a=of1, b=of2, S=S, F=F, out=of);
+}

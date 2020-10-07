@@ -101,3 +101,15 @@ Task 3: To implement a log function of integers z=log x, where x is a positive i
 ###  fib and printf in sys
 
 Both use MIPS to implement fibonacci and printf(in c but not entirely same)
+
+###  maze in IAI(matlab)
+
+use A* algorithm to generate maze and BFS way to solve the maze(not the most optimal but meet the requirements of the project)
+
+###  data training using matlab in IAI
+
+use different variable settings (such as PCA and reduce attribute of dataset) to test the impact of variables on the network.
+
+### mask purchase website
+
+use HTML, Javascript, PHP, ulkit to ultimate the truth process of purchasing mask online and operation of the whole company

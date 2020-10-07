@@ -11,7 +11,7 @@ This part is my coursework in UNNC since the second semester. If you have some q
  cf | [chip](cf/cw1) <br/> [assembler](cf/cw2)
  sys | [fibonacci](sys/Q1.s) <br/> [printf](sys/Q2.s)
  IAI | **task1: maze**<br/>[A*_mazesolver](IAI/FAIcw1-20126355/Astar-MazeSolver-20126355) <br/> [BFSMazeGenerator](IAI/FAIcw1-20126355/BFSMazeGenerator_20126355)<br/><br/>**task2: data**<br/>[useDifferVariableSettingTrain](IAI/FAIcw2-20126355)
- DBI | [mask_purchase_website](dbi)
+ DBI | [mask_purchase_website](20126355-Wendi-Han)
 
 # Introduce to each work
 

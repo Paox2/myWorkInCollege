@@ -1,0 +1,534 @@
+body{
+    position: absolute;
+	background-color : #f0f0f4;	
+	background-repeat: repeat;
+    margin: 0;
+    padding: 0;
+    min-height:100%;
+    width: 100%;
+}
+
+/* login page */
+.login-canvas-position{
+	position: absolute;
+    margin-top: 0;
+	left: 50%;
+	border-radius: 20px;
+    transform: translate(-50%,10%);
+}
+
+/* register page */
+.register-canvas-position{
+	position: absolute;
+	left: 50%;
+	bottom: 60%;
+	right: 50%;
+	border-radius: 20px;
+	transform: translate(-50%,2%);
+}
+
+/* update page */
+.update-canvas-position{	
+	position: absolute;
+	left: 50%;
+	bottom: 50%;
+	right: 50%;
+	border-radius: 20px;
+	transform: translate(-50%, 2%);
+}
+
+/* show different when input is valid or invalid */
+input:invalid {
+  border: 1px dashed grey;
+}
+
+input:valid {
+  border: 1px solid black;
+}
+
+/* navigate logo */
+.index-logo {
+	top: 20%;
+	left: 20%;
+	height: 80%;
+	width: 50%;
+	opacity:0.8;
+}
+
+/* customer index page mask photo */
+.customer-index-photo-table {
+	position: relative;
+	width: 95%;
+	left: 50px;
+	right: 0;
+	transform:translate(0,5%);
+}
+
+/* customer index page mask name */
+.customer-index-photo-name {
+	font-family: Trebuchet MS, sans-serif;
+	font-weight: 600;
+	font-stretch: semi-expanded;
+	transform: translate(20%,0);
+	text-align: center;
+}
+
+/* navigate, also use in manager and reps page, include list, font and position, color*/
+ul.customer-index-navigate {
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+ul > li.customer-index-navigate-li{
+	display: inline;
+	margin: 10px;
+}
+li a.customer-index-navigate-a{
+	color: black;
+	font-family: Microsoft YaHei;
+}
+li a:hover{
+	background-color: #f3f3f3;
+}
+
+/* customer purchase prompt */
+div.customer-purchase-prompt{
+	position: relative;
+	color: black;
+	text-align: center;
+	font-family: Trebuchet MS, sans-serif;
+	font-weight: 600;
+	top: 30px;
+	font-size: 200%;
+}
+/* purchase table (no border)*/
+table.customer-purchase-table{
+	position: relative;
+	top: 50px;
+	left: 10%;
+	width: 80%;
+}
+tr>td.customer-purchase-table{
+    text-align: center;
+    font-family: Trebuchet MS, sans-serif;
+    font-size:120%;
+}
+.customer-purchase-name{
+	text-align: center;
+	font-family: Trebuchet MS, sans-serif;
+	font-size:120%;
+}
+div.customer-purchase-prompt2{
+	position: relative;
+	color: black;
+	text-align: center;
+	font-family: Trebuchet MS, sans-serif;
+	font-weight: 600;
+	top: 30px;
+	font-size: 150%;
+}
+/* choose reps font in customer purchase*/
+div.customer-purchase-chooseReps{
+	position: absolute;
+	width: 50%;
+	margin-top: 30%;
+	left: 50%;
+	font-family: Trebuchet MS, sans-serif;
+	font-size: 150%;
+	text-align: center;
+	color: black;
+	font-weight: 600;
+	transform: translate(-50%,0);
+}
+
+/* choose reps*/
+label.customer-purchase-reps{
+	width: 30%;
+	font-family: Trebuchet MS, sans-serif;
+	font-size: 110%;
+}
+
+select.customer-purchase-reps{
+	width: 70%;
+	font-family: Trebuchet MS, sans-serif;
+	font-size: 110%;
+}
+
+/* customer order list */
+div.customer-order-no{
+	position: relative;
+	top: 20%;
+	font-size: 200%;
+	font-family: Trebuchet MS, sans-serif;
+	color: black;
+}
+
+/* customer order list, also use as order list in reps and manager*/
+tr.customer-order-list{
+    display: block;
+	top: 20%;
+    margin-block-start: 1em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 40px;
+}
+table.customer-order-list {
+	table-layout: fixed;
+	width: 70%;
+
+}
+
+ul.customer-order-list{
+	list-style-type: none;
+
+}
+
+ul>li.customer-order-list{
+	display: inline;
+	list-style: none;
+	margin: 40px;
+	font-family:  Helvetica, Tahoma, Arial;
+	font-size: 130%;
+	box-sizing: border-box;
+	text-align: center;
+	color: black;
+}
+
+.customer-order-tt{
+    position: relative;
+	display: inline;
+	list-style: none;
+	margin: 40px;
+	font-family: Tahoma;
+	font-size: 130%;
+	box-sizing: border-box;
+	text-align: center;
+	color: black;
+    top: 10px;
+}
+
+tr>th.customer-order-list{
+	list-style: none;
+	margin: 10px;
+	font-family: Trebuchet MS, sans-serif;
+	font-size: 130%;
+	box-sizing: border-box;
+	color: black;
+}
+
+/* shadow use in card create by myself */
+div.shadow{
+	box-shadow: 10px 10px 5px #888888;
+}
+
+/* accomplished my self card */
+.customer-order-card{
+    width: auto;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+/* purchase purchase image */
+.customer-purchase-photo{
+    border-radius:50%;
+    width: 80%;
+    margin: 10%;
+}
+
+/*ul>li.customer-order-drop{*/
+/*	display: inline;*/
+/*	list-style: none;*/
+/*	font-family: Trebuchet MS, sans-serif;*/
+/*	font-size: 100%;*/
+/*	color: black;*/
+/*}*/
+
+/* reps navigate, small change position of navigate*/
+.rep-index-navigate{
+    position: relative;
+    right: 10%;
+}
+
+/* order list ID */
+.order-ID{
+    position: absolute;
+    right: 50%;
+    transform: translate(-50%,-180%);
+}
+
+/* reps quota table */
+td.reps-quota{
+    width:auto;
+	font-family: Trebuchet MS, sans-serif;
+	font-size: 120%;
+    text-align: center;
+    border-collapse: separate;
+    border-bottom: 0.3em double;
+    border-spacing: 10px;
+}
+
+table.reps-quota{
+    background-color: #f8f8f8;
+    position: relative;
+    width: 70%;
+    transform: translate(21.4%,20%);
+    border: thick double;
+    color: black;
+}
+
+th.reps-quota{
+    width:auto;
+	font-family: Trebuchet MS, sans-serif;
+	font-size: 120%;
+    text-align: center;
+    border-bottom: 0.3em double;
+    color: black;
+}
+
+/* footer in customer index page */
+footer{
+    position: relative;
+    top: 100px;
+    padding: 45px 0;
+    text-align: center;
+    width: 100%;
+    display: block;
+    background-color: black;
+}
+footer > p{
+    color: #aab;
+    font-size: 12px;
+}
+
+/* different color of different line of table */
+table#quota-reps tr:nth-child(even) {
+  background-color: #eee;
+}
+table#quota-reps tr:nth-child(odd) {
+ background-color: #fff;
+}
+caption#quota-caption {
+	font-family: Trebuchet MS, sans-serif;
+	font-size: 200%;
+    margin-bottom: 0.5em;
+}
+
+/* accomplish my own card */
+.mycard{
+    display: grid;
+    grid-template-columns: 0.9fr 1fr;
+    margin: auto;
+    padding: 2.5em 0;
+    min-width: 600px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+/* manager index page font at the top of page */
+.manager-index-p{
+	font-family: Trebuchet MS, sans-serif;
+	font-size: 150%;
+    margin-bottom: 15px;
+    font-weight: 600;
+    right:0;
+}
+
+.manager-index-container {
+    margin: 20px;
+    width: 60%;
+}
+
+/* drop down delect bar */
+.manager-select-wrapper{
+    position: relative;
+    user-select: none;
+}
+
+.manager-select {
+    display: flex;
+    flex-direction: column;
+    border-width: 0 2px 0 2px;
+    border-style: solid;
+    border-color: grey;
+    width: 60%;
+}
+
+.manager-select-show {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 22px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #3b3b3b;
+    height: 45px;
+    line-height: 60px;
+    background: #ffffff;
+    cursor: pointer;
+    border-width: 2px 0 2px 0;
+    border-style: solid;
+    border-color: grey;
+}
+
+.manager-options {
+    position: absolute;
+    display: block;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border: 2px solid grey;
+    border-top: 0;
+    background: #fff;
+    transition: all 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 2;
+    width: 60%;
+}
+
+.manager-select.open .manager-options {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+
+.manager-option {
+    position: relative;
+    display: block;
+    padding: 0 30px 0 22px;
+    font-size: 22px;
+    font-weight: 300;
+    color: #3b3b3b;
+    line-height: 45px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.manager-option:hover {
+    cursor: pointer;
+    background-color: #b2b2b2;
+}
+
+.manager-option.selected {
+    color: #ffffff;
+    background-color: #305c91;
+}
+
+/* drop down select bar icon*/
+.icon {
+    position: relative;
+    height: 15px;
+    width: 15px;
+}
+
+.icon::before,
+.icon::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0.15rem;
+    height: 100%;
+    transition: all 0.5s;
+}
+
+.icon::before {
+    left: -5px;
+    transform: rotate(45deg);
+    background-color: grey;
+}
+
+.icon::after {
+    left: 5px;
+    transform: rotate(-45deg);
+    background-color: grey;
+}
+
+.open .icon::before {
+    left: -5px;
+    transform: rotate(-45deg);
+}
+
+.icon::after {
+    left: -5px;
+    transform: rotate(45deg);
+}
+
+/* manager quota table user in most of table in this website */
+table.manager-quota{
+    background-color: #f8f8f8;
+    position: relative;
+    width: 70%;
+    transform: translate(21.4%,30%);
+    border: thick double;
+    color: black;
+}
+tr.even {
+  background-color: #eee;
+}
+tr.odd {
+ background-color: #fff;
+}
+tr.quota-table{
+    font-size: 120%;
+    font-family: Trebuchet MS, sans-serif;
+    height: 120%;
+	font-weight: 300;
+}
+
+/* statistics */
+.statistics-total{
+    position: relative;
+    width: 80%;
+    height: auto;
+    margin: 10px;
+    top: 25px;
+    transform: translate(12.5%, 0);
+    background-color: white;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.statistics-total-title{
+    position: relative;
+    font-family: Trebuchet MS, sans-serif;
+    font-weight: 600;
+    margin: 10px;
+    text-align: center;
+}
+
+table.manager-quota{
+    background-color: #f8f8f8;
+    position: relative;
+    width: 70%;
+    border: thick double;
+    color: black;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+}
+
+.manager-index-container2 {
+    margin: 20px;
+    width: 80%;
+}
+
+/* manager reps page table*/
+table.manager-quota2{
+    background-color: #f8f8f8;
+    position: relative;
+    width: 100%;
+    border: thick double;
+    color: black;
+    transform: translate(12.5%,0);
+}
+
+/* region select font */
+select.region{
+    font-size: 1.5em;
+    padding: 2px 5px;
+}

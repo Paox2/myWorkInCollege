@@ -1,7 +1,7 @@
 >a student in nottingham Ningbo China
-# myCW
+# My Work In College
 
-This part is my coursework in UNNC since the second semester. If you have some question or want to access the issue sheet can try to contact me. Also the method is not optimal, there are some areas can be improved. If you have some better ideas or find something that can be optimized, please contact me.
+This part is my task code in UNNC since the second semester and futher in UNUK. The method is not optimal, there are some areas can be improved. If you have some better ideas or find something that can be optimized, please contact me.
 
 # Overview
 

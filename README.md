@@ -1,18 +1,18 @@
 > a year 2 student in UNUK
 # My Work In College
 
-This part is my task code in UNNC since the second semester and futher in UNUK. The method is not optimal, there are some areas can be improved. If you have some better ideas or find something that can be optimized, please contact me.
+This part is my task code in UNNC since the second semester and futher in UNUK. The method is not optimal, there are some areas can be improved. If you have some better ideas or find something that can be optimized or need a work sheet, please contact me.
 
 # Overview
 
- course | title
+ language | task title
  -|-
  c | [airstrikeplanner](c/airstrikeplanner.c)
- cf | [chip](cf/cw1) <br/> [assembler](cf/cw2)
- sys | [fibonacci](sys/Q1.s) <br/> [printf](sys/Q2.s)
- IAI | **task1: maze**<br/>[A*_mazesolver](IAI/FAIcw1-20126355/Astar-MazeSolver-20126355) <br/> [BFSMazeGenerator](IAI/FAIcw1-20126355/BFSMazeGenerator_20126355)<br/><br/>**task2: data**<br/>[useDifferVariableSettingTrain](IAI/FAIcw2-20126355)
- DBI | [mask_purchase_website](20126355-Wendi-Han)
- fse | [software develop](fse)
+ assember | [chip](cf/cw1) <br/> [assembler](cf/cw2)
+ MIPS | [fibonacci](sys/Q1.s) <br/> [printf](sys/Q2.s)
+ matlab | **task1: maze**<br/>[A*_mazesolver](IAI/FAIcw1-20126355/Astar-MazeSolver-20126355) <br/> [BFSMazeGenerator](IAI/FAIcw1-20126355/BFSMazeGenerator_20126355)<br/><br/>**task2: data**<br/>[useDifferVariableSettingTrain](IAI/FAIcw2-20126355)
+ HTML/CSS + JS + PHP + SQL | [mask_purchase_website](20126355-Wendi-Han)
+ software engineering(java test code + diagram + report) | [software develop](fse)
 
 # Introduce to each work
 
@@ -101,7 +101,7 @@ Task 3: To implement a log function of integers z=log x, where x is a positive i
 
 ###  fib and printf in sys
 
-Both use MIPS to implement fibonacci and printf(in c but not entirely same)
+Both of them use MIPS to implement fibonacci and printf(in c but not entirely same)
 
 ###  maze in IAI(matlab)
 

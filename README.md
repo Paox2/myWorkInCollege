@@ -1,4 +1,4 @@
-> a student in UNNC and now is year 2 in UNUK
+> a year 2 student in UNUK
 # My Work In College
 
 This part is my task code in UNNC since the second semester and futher in UNUK. The method is not optimal, there are some areas can be improved. If you have some better ideas or find something that can be optimized, please contact me.

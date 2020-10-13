@@ -12,7 +12,7 @@ This part is my task code in UNNC since the second semester and futher in UNUK. 
  MIPS | [fibonacci](sys/Q1.s) <br/> [printf](sys/Q2.s)
  matlab | **task1: maze**<br/>[A*_mazesolver](IAI/FAIcw1-20126355/Astar-MazeSolver-20126355) <br/> [BFSMazeGenerator](IAI/FAIcw1-20126355/BFSMazeGenerator_20126355)<br/><br/>**task2: data**<br/>[useDifferVariableSettingTrain](IAI/FAIcw2-20126355)
  HTML/CSS + JS + PHP + SQL | [mask_purchase_website](20126355-Wendi-Han)
- software engineering(java test code + diagram + report) | [software develop](fse)
+ software engineering<br/>(java test code + diagram + report) | [software develop](fse)
 
 # Introduce to each work
 
